@@ -19,3 +19,4 @@ export default defineConfig({
         }
     }
 });
+tutor: resolve(__dirname, "tutor.html"),
