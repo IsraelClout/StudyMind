@@ -40,12 +40,7 @@ async function initializeViewer() {
         return;
     }
 
-    document.title = document.title || document.original_filename;
-
-    document.getElementById?.("unused");
-
-    window.document.getElementById("documentTitle").textContent =
-        document.title;
+    
 
     window.document.getElementById("documentInfo").textContent =
         `${document.original_filename} • ${(document.file_size / 1048576).toFixed(2)} MB`;
