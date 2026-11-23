@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMind AI | AI Tutor</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="tutor-page">
+
+    <header class="tutor-header">
+        <a href="/dashboard.html" class="tutor-brand">
+            <span class="tutor-brand-icon">S</span>
+            <span>StudyMind AI</span>
+        </a>
+
+        <nav>
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/materials.html">My Materials</a>
+            <a href="/subjects.html">Subjects</a>
+        </nav>
+    </header>
+
+    <main class="tutor-container">
+
+        <section class="tutor-welcome">
+            <span class="tutor-eyebrow">YOUR PERSONAL ACADEMIC ASSISTANT</span>
+            <h1>Learn smarter with <span>StudyMind AI.</span></h1>
+            <p>
+                Ask questions, understand difficult concepts and learn
+                directly from your uploaded lecture materials.
+            </p>
+        </section>
+
+        <section class="tutor-workspace">
+
+            <div class="tutor-controls">
+                <label for="documentSelect">Choose your study material</label>
+
+                <select id="documentSelect">
+                    <option value="">Search all my processed materials</option>
+                </select>
+
+                <p>
+                    Select one document or search across all your
+                    processed materials.
+                </p>
+            </div>
+
+            <div id="chatMessages" class="chat-messages"
+                 aria-live="polite">
+
+                <div class="chat-welcome-message">
+                    <div class="ai-avatar">S</div>
+                    <div>
+                        <h3>Hello! I'm your StudyMind AI Tutor.</h3>
+                        <p>
+                            Ask me something about your course materials.
+                            I'll find relevant information and explain it
+                            step by step.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <form id="questionForm" class="question-form">
+
+                <textarea
+                    id="questionInput"
+                    rows="2"
+                    maxlength="4000"
+                    placeholder="Ask something about your lecture notes..."
+                    required
+                ></textarea>
+
+                <div class="question-form-footer">
+                    <span>StudyMind AI can make mistakes. Check important facts against your notes.</span>
+
+                    <button id="sendQuestionBtn" type="submit">
+                        Ask StudyMind AI →
+                    </button>
+                </div>
+
+            </form>
+
+            <p id="tutorStatus" class="tutor-status" role="status"></p>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="/js/tutor.js"></script>
+
+</body>
+</html>
