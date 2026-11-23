@@ -390,6 +390,15 @@ async function initialize() {
         profile.full_name.charAt(0).toUpperCase();
 
     await loadSubjects();
+    
+const requestedSubject =
+    new URLSearchParams(window.location.search).get("subject");
+
+if (requestedSubject &&
+    allSubjects.some(subject => subject.id === requestedSubject)) {
+    document.getElementById("subjectFilter").value = requestedSubject;
+}
+    
     await loadDocuments();
 
     document.getElementById("openUploadButton")
