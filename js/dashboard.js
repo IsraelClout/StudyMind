@@ -35,12 +35,15 @@ async function initializeDashboard() {
 
             const feature = link.dataset.feature;
 
-            const pages = {
-                tutor: "tutor.html",
-                materials: "materials.html",
-                exams: "exams.html",
-                summaries: "summaries.html",
-                analytics: "analytics.html"
+            
+const pages = {
+    tutor: "tutor.html",
+    materials: "materials.html",
+    exams: "exams.html",
+    summaries: "summaries.html",
+    analytics: "analytics.html"
+};
+            
             };
 
             if (pages[feature]) {
