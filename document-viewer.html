@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Viewer - StudyMind AI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dashboard-page">
+
+<header class="viewer-header">
+    <a href="/materials.html" class="btn btn-outline">
+        ← Back to Materials
+    </a>
+
+    <div>
+        <h2 id="documentTitle">Loading document...</h2>
+        <p id="documentInfo"></p>
+    </div>
+
+    <button class="btn btn-primary" id="downloadButton" disabled>
+        Download
+    </button>
+</header>
+
+<main class="viewer-main">
+    <div id="viewerStatus" class="message">
+        Loading your document...
+    </div>
+
+    <iframe
+        id="pdfViewer"
+        title="Academic document preview"
+        hidden>
+    </iframe>
+</main>
+
+<script type="module" src="/js/document-viewer.js"></script>
+</body>
+</html>
