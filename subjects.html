@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Subjects - StudyMind AI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dashboard-page">
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <a href="/" class="logo">StudyMind<span>AI</span></a>
+
+        <div class="sidebar-label">WORKSPACE</div>
+
+        <a href="/dashboard.html" class="side-link">
+            <span>⌂</span> Dashboard
+        </a>
+
+        <a href="/materials.html" class="side-link">
+            <span>▤</span> My Materials
+        </a>
+
+        <a href="/subjects.html" class="side-link active">
+            <span>📚</span> My Subjects
+        </a>
+
+        <button id="logoutButton" class="side-link logout">
+            ↪ Logout
+        </button>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div>
+                <h2>Subject Management</h2>
+                <p>Organize your academic courses.</p>
+            </div>
+        </header>
+
+        <section class="material-heading">
+            <div>
+                <span class="eyebrow">YOUR ACADEMIC ORGANIZATION</span>
+                <h1>My Subjects</h1>
+                <p>Create subjects and organize your learning materials.</p>
+            </div>
+
+            <button class="btn btn-primary" id="addSubjectButton">
+                + Add Subject
+            </button>
+        </section>
+
+        <section class="subject-form-card" id="subjectFormCard" hidden>
+
+            <h3>Create a new subject</h3>
+
+            <form id="subjectForm">
+
+                <label>Subject Name</label>
+                <input id="subjectName"
+                    placeholder="e.g. Algebra and Trigonometry"
+                    maxlength="100" required>
+
+                <label>Course Code</label>
+                <input id="courseCode"
+                    placeholder="e.g. MAT 101"
+                    maxlength="30">
+
+                <label>Description</label>
+                <textarea id="subjectDescription"
+                    placeholder="Describe this subject..."
+                    maxlength="500"></textarea>
+
+                <label>Subject Color</label>
+                <input type="color" id="subjectColor"
+                    value="#2563eb">
+
+                <div id="subjectMessage" class="message"></div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        Save Subject
+                    </button>
+
+                    <button type="button" class="btn btn-outline"
+                        id="cancelSubjectButton">
+                        Cancel
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <div class="section-title-row">
+            <h3>Your Courses</h3>
+            <span id="subjectCount">0 subjects</span>
+        </div>
+
+        <section id="subjectsGrid" class="subjects-grid">
+            <p>Loading subjects...</p>
+        </section>
+
+    </main>
+</div>
+
+<script type="module" src="/js/subjects.js"></script>
+</body>
+</html>
