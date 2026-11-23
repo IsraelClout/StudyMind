@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Materials - StudyMind AI</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <a href="/" class="logo">StudyMind<span>AI</span></a>
+
+        <div class="sidebar-label">WORKSPACE</div>
+
+        <a class="side-link" href="/dashboard.html">
+            <span>⌂</span> Dashboard
+        </a>
+
+        <a class="side-link active" href="/materials.html">
+            <span>▤</span> My Materials
+        </a>
+
+        <a class="side-link" href="/subjects.html">
+            <span>📚</span> My Subjects
+        </a>
+
+        <a class="side-link" href="#" data-feature="tutor">
+            <span>✧</span> AI Tutor
+        </a>
+
+        <a class="side-link" href="#" data-feature="exams">
+            <span>▣</span> Exams & Quizzes
+        </a>
+
+        <a class="side-link" href="#" data-feature="summaries">
+            <span>≡</span> Summaries
+        </a>
+
+        <div class="sidebar-bottom">
+            <button id="logoutButton" class="side-link logout">
+                ↪ Logout
+            </button>
+        </div>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div>
+                <h2>Academic Materials</h2>
+                <p>Manage your personal learning resources.</p>
+            </div>
+
+            <div class="user-info">
+                <div class="avatar" id="userAvatar">S</div>
+                <span id="userName">Student</span>
+            </div>
+
+        </header>
+
+        <section class="material-heading">
+
+            <div>
+                <span class="eyebrow">YOUR KNOWLEDGE LIBRARY</span>
+                <h1>My Study Materials</h1>
+                <p>
+                    Everything you upload becomes part of
+                    your personal academic knowledge library.
+                </p>
+            </div>
+
+            <button class="btn btn-primary"
+                id="openUploadButton">
+                + Upload Materials
+            </button>
+
+        </section>
+
+        <section class="material-stats">
+
+            <div class="stat-card">
+                <span>📁</span>
+                <p>Total Materials</p>
+                <h2 id="totalDocuments">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>📚</span>
+                <p>Subjects</p>
+                <h2 id="totalSubjects">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>💾</span>
+                <p>Storage Used</p>
+                <h2 id="storageUsed">0 MB</h2>
+            </div>
+
+        </section>
+
+        <section class="material-toolbar">
+
+            <input
+                type="search"
+                id="searchMaterials"
+                placeholder="Search your materials..."
+            >
+
+            <select id="subjectFilter">
+                <option value="all">All Subjects</option>
+            </select>
+
+            <select id="typeFilter">
+                <option value="all">All File Types</option>
+                <option value="pdf">PDF</option>
+                <option value="docx">DOCX</option>
+                <option value="pptx">PPTX</option>
+                <option value="txt">TXT</option>
+                <option value="csv">CSV</option>
+                <option value="doc">DOC</option>
+                <option value="ppt">PPT</option>
+            </select>
+
+        </section>
+
+        <section class="upload-dropzone" id="dropZone">
+
+            <div class="upload-icon">☁</div>
+
+            <h3>Upload your academic materials</h3>
+
+            <p>
+                Drag and drop your files here, or click below.
+            </p>
+
+            <button class="btn btn-outline" id="browseButton">
+                Browse Files
+            </button>
+
+            <small>
+                PDF, DOCX, DOC, PPTX, PPT, TXT and CSV.
+                Maximum 20 MB per file.
+            </small>
+
+            <input
+                type="file"
+                id="fileInput"
+                multiple
+                accept=".pdf,.docx,.doc,.pptx,.ppt,.txt,.csv"
+                hidden
+            >
+
+        </section>
+
+        <div id="uploadStatus" class="message"></div>
+
+        <section class="materials-section">
+
+            <div class="section-title-row">
+                <h3>All Materials</h3>
+                <a href="/subjects.html">Manage subjects →</a>
+            </div>
+
+            <div id="materialsGrid" class="materials-grid">
+
+                <div class="empty-state">
+                    Loading your academic materials...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="/js/materials.js"></script>
+
+</body>
+</html>
