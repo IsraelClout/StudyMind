@@ -704,3 +704,400 @@ footer {
         padding: 24px;
     }
 }
+
+/* ===================================
+   STUDYMIND AI - PHASE 2
+   MATERIAL MANAGEMENT
+=================================== */
+
+.material-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0 25px;
+}
+
+.material-heading h1 {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.material-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.material-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.material-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 200px 170px;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.material-toolbar input,
+.material-toolbar select,
+.subject-form-card input,
+.subject-form-card textarea {
+    width: 100%;
+    padding: 13px;
+    color: white;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+.material-toolbar input:focus,
+.material-toolbar select:focus,
+.subject-form-card input:focus,
+.subject-form-card textarea:focus {
+    border-color: var(--primary);
+}
+
+.material-toolbar select option {
+    background: var(--surface);
+}
+
+.upload-dropzone {
+    padding: 35px 20px;
+    text-align: center;
+    border: 2px dashed rgba(96,165,250,.35);
+    border-radius: 14px;
+    background: rgba(37,99,235,.045);
+    transition: .2s;
+}
+
+.upload-dropzone.drag-active {
+    border-color: #60a5fa;
+    background: rgba(37,99,235,.13);
+}
+
+.upload-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #60a5fa;
+}
+
+.upload-dropzone h3 {
+    margin-bottom: 8px;
+}
+
+.upload-dropzone p,
+.upload-dropzone small {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.upload-dropzone small {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.materials-section {
+    margin-top: 35px;
+}
+
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.section-title-row h3 {
+    font-size: 17px;
+}
+
+.section-title-row a {
+    color: #60a5fa;
+    font-size: 12px;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.material-card,
+.subject-card {
+    min-width: 0;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+.material-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.material-file-icon {
+    font-size: 28px;
+}
+
+.delete-material {
+    background: transparent;
+    border: 0;
+    color: var(--muted);
+    font-size: 22px;
+}
+
+.delete-material:hover {
+    color: #f87171;
+}
+
+.material-card h3 {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-bottom: 6px;
+}
+
+.material-filename {
+    font-size: 11px;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.material-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 10px;
+    color: var(--muted);
+    margin: 17px 0 10px;
+}
+
+.material-subject {
+    font-size: 11px;
+    color: #93c5fd;
+    margin-bottom: 8px;
+}
+
+.processing-status {
+    display: inline-block;
+    padding: 5px 9px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background: rgba(96,165,250,.1);
+    color: #93c5fd;
+    font-size: 10px;
+}
+
+.material-card .btn {
+    font-size: 11px;
+    padding: 10px;
+}
+
+.empty-state {
+    padding: 30px;
+    text-align: center;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+}
+
+/* SUBJECT MANAGEMENT */
+
+.subject-form-card {
+    max-width: 600px;
+    padding: 25px;
+    margin: 20px 0 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.subject-form-card[hidden] {
+    display: none;
+}
+
+.subject-form-card h3 {
+    margin-bottom: 20px;
+}
+
+.subject-form-card label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 16px 0 8px;
+}
+
+.subject-form-card textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.subject-form-card input[type="color"] {
+    height: 45px;
+    padding: 4px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.subject-card {
+    border-top: 3px solid var(--primary);
+}
+
+.subject-card-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.subject-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.course-code {
+    color: #60a5fa;
+    font-size: 11px;
+}
+
+.subject-card > p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 15px 0;
+    min-height: 38px;
+    overflow-wrap: anywhere;
+}
+
+.subject-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.subject-card-footer .btn {
+    padding: 8px 10px;
+    font-size: 10px;
+}
+
+.subject-delete {
+    margin-top: 17px;
+    color: #f87171;
+    background: transparent;
+    border: none;
+    font-size: 11px;
+}
+
+.subject-delete:hover {
+    text-decoration: underline;
+}
+
+/* DOCUMENT VIEWER */
+
+.viewer-header {
+    min-height: 85px;
+    padding: 15px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.viewer-header h2 {
+    font-size: 16px;
+}
+
+.viewer-header p {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.viewer-main {
+    padding: 20px;
+}
+
+#pdfViewer {
+    width: 100%;
+    height: calc(100vh - 145px);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+}
+
+#pdfViewer[hidden] {
+    display: none;
+}
+
+/* MOBILE */
+
+@media(max-width: 1000px) {
+    .materials-grid,
+    .subjects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width: 650px) {
+    .material-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .material-heading h1 {
+        font-size: 25px;
+    }
+
+    .material-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .material-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .materials-grid,
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .viewer-header {
+        flex-wrap: wrap;
+    }
+
+    .viewer-header > div {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .viewer-main {
+        padding: 10px;
+    }
+
+    #pdfViewer {
+        height: 75vh;
+    }
+    }
+
